@@ -4,8 +4,14 @@
       "src": "src/index.js",
       "use": "@vercel/node"
   }],
-  "routes": [{
-      "src": "/(.*)",
-      "dest": "index.js"
-  }]
+"routes": [
+  {
+    "src": "/api/(.*)", // Route API requests to the serverless function
+    "dest": "src/index.js"
+  },
+  {
+    "src": "/(.*)", // Serve static files from the "public" directory
+    "dest": "public/$1"
+  }
+]
 }
