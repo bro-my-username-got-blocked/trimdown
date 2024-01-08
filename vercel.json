@@ -6,11 +6,11 @@
   }],
 "routes": [
   {
-    "src": "/api/(.*)", // Route API requests to the serverless function
+    "src": "/api/(.*)",
     "dest": "src/index.js"
   },
   {
-    "src": "/(.*)", // Serve static files from the "public" directory
+    "src": "/(.*)",
     "dest": "public/$1"
   }
 ]
